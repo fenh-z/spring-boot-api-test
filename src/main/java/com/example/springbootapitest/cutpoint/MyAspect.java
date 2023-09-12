@@ -1,5 +1,6 @@
 package com.example.springbootapitest.cutpoint;
 
+import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
 import org.springframework.stereotype.Component;
 
@@ -12,7 +13,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class MyAspect {
 
-    @Pointcut("execution(* com.example.springbootapitest.cutpoint.HelloServiceImpl.sayHello(..))")
+    @Pointcut(value = "@annotation(AspectAOP)")
     public void pointCut() {
 
     }
@@ -36,5 +37,11 @@ public class MyAspect {
     public void afterThrowing() {
         System.out.println("afterThrowing...");
     }
+
+//    @Around("pointCut()")
+//    public void around(ProceedingJoinPoint joinPoint) throws Throwable {
+//        System.out.println("around before ...");
+//        System.out.println("aroudn after ...");
+//    }
 
 }

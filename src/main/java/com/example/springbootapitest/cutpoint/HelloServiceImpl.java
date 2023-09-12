@@ -16,6 +16,7 @@ public class HelloServiceImpl implements HelloService {
     @Override
     @RequestMapping("/say")
     @ResponseBody
+    @AspectAOP
     public String sayHello(String name) {
         if (name == null || name.trim().isEmpty()) {
             throw new RuntimeException("parameter name is null");
