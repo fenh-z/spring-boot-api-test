@@ -1,5 +1,6 @@
 package com.example.springbootapitest.cutpoint;
 
+import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
 import org.springframework.stereotype.Component;
@@ -21,6 +22,12 @@ public class MyAspect {
     @Before("pointCut()")
     public void before() {
         System.out.println("before...");
+    }
+
+    @Before("pointCut() && args(arg)")
+    public void beforeParam(JoinPoint joinPoint, String arg) {
+        Object[] args = joinPoint.getArgs();
+        System.out.println("before param .....");
     }
 
     @After("pointCut()")
