@@ -24,8 +24,8 @@ public class MyAspect {
         System.out.println("before...");
     }
 
-    @Before("pointCut() && args(arg)")
-    public void beforeParam(JoinPoint joinPoint, String arg) {
+    @Before("pointCut()")
+    public void beforeParam(JoinPoint joinPoint) {
         Object[] args = joinPoint.getArgs();
         System.out.println("before param .....");
     }
