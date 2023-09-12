@@ -6,5 +6,5 @@ package com.example.springbootapitest.cutpoint;
  * @Describe todo
  */
 public interface HelloService {
-    void sayHello(String name);
+    String sayHello(String name);
 }

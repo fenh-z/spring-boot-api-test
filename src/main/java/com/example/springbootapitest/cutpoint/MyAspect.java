@@ -1,6 +1,7 @@
 package com.example.springbootapitest.cutpoint;
 
 import org.aspectj.lang.annotation.*;
+import org.springframework.stereotype.Component;
 
 /**
  * @Author zhangdx
@@ -8,9 +9,10 @@ import org.aspectj.lang.annotation.*;
  * @Describe todo
  */
 @Aspect
+@Component
 public class MyAspect {
 
-    @Pointcut("execution(* cutpoint.HelloServiceImpl.sayHello(..))")
+    @Pointcut("execution(* com.example.springbootapitest.cutpoint.HelloServiceImpl.sayHello(..))")
     public void pointCut() {
 
     }
