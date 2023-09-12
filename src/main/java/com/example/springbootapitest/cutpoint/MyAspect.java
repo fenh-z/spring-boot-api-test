@@ -41,7 +41,8 @@ public class MyAspect {
 //    @Around("pointCut()")
 //    public void around(ProceedingJoinPoint joinPoint) throws Throwable {
 //        System.out.println("around before ...");
-//        System.out.println("aroudn after ...");
+//        joinPoint.proceed();
+//        System.out.println("around after ...");
 //    }
 
 }
