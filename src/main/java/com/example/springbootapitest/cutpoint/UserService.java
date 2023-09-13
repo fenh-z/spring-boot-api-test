@@ -1,5 +1,6 @@
 package com.example.springbootapitest.cutpoint;
 
+import com.example.springbootapitest.pojo.User;
 import org.springframework.stereotype.Component;
 
 /**
@@ -10,11 +11,11 @@ import org.springframework.stereotype.Component;
 @Component
 public class UserService {
     public void printUser(User user) {
-        if (user == null){
+        if (user == null) {
             throw new RuntimeException("check user is null");
         }
-        System.out.println("id = "+user.getId());
-        System.out.println("name = "+user.getName());
-        System.out.println("note = "+user.getNote());
+        System.out.println("id = " + user.getId());
+        System.out.println("name = " + user.getUser_name());
+        System.out.println("note = " + user.getNote());
     }
 }
