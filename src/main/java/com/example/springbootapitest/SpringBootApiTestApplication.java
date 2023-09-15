@@ -6,10 +6,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.stereotype.Repository;
 
 @SpringBootApplication
-@MapperScan(
-        basePackages = "com.example.springbootapitest.dao",
-        annotationClass = Repository.class
-)
+//@MapperScan(
+//        basePackages = "com.example.springbootapitest.dao",
+//        annotationClass = Repository.class
+//)
 public class SpringBootApiTestApplication {
 
     public static void main(String[] args) {
