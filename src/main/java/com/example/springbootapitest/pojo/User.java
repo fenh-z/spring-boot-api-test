@@ -1,5 +1,8 @@
 package com.example.springbootapitest.pojo;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.apache.ibatis.type.Alias;
 
 /**
@@ -7,44 +10,14 @@ import org.apache.ibatis.type.Alias;
  * @CreateDate 2023/9/13 15:29
  * @Describe todo
  */
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Alias(value = "user")
 public class User {
     private Long id;
     private String user_name;
     private Long sex;
     private String note;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getUser_name() {
-        return user_name;
-    }
-
-    public void setUser_name(String user_name) {
-        this.user_name = user_name;
-    }
-
-    public Long getSex() {
-        return sex;
-    }
-
-    public void setSex(Long sex) {
-        this.sex = sex;
-    }
-
-    public String getNote() {
-        return note;
-    }
-
-    public void setNote(String note) {
-        this.note = note;
-    }
-
 
 }
