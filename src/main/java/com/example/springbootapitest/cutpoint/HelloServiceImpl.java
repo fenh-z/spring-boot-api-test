@@ -1,5 +1,6 @@
 package com.example.springbootapitest.cutpoint;
 
+import com.example.springbootapitest.interceptor.AnyPrint;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -16,7 +17,7 @@ public class HelloServiceImpl implements HelloService {
     @Override
     @RequestMapping("/say")
     @ResponseBody
-    @AspectAOP
+    @AnyPrint
     public String sayHello(String name) {
         if (name == null || name.trim().isEmpty()) {
             throw new RuntimeException("parameter name is null");
