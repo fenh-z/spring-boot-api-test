@@ -25,6 +25,7 @@ public class UserController {
     @ResponseBody
     public User printUser(Long id, String name, String note) {
         User user = new User();
+
         user.setId(id);
         user.setUser_name(name);
         user.setNote(note);
