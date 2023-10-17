@@ -18,8 +18,6 @@ public class AnyPrintConfiguration {
         AnyPrintInterceptor anyPrintInterceptor = new AnyPrintInterceptor();
         DefaultPointcutAdvisor defaultPointcutAdvisor = new DefaultPointcutAdvisor();
         AspectJExpressionPointcut pointcut = new AspectJExpressionPointcut();
-
-
         pointcut.setExpression("@annotation(com.example.springbootapitest.interceptor.AnyPrint)");
         defaultPointcutAdvisor.setPointcut(pointcut);
         defaultPointcutAdvisor.setAdvice(anyPrintInterceptor);
