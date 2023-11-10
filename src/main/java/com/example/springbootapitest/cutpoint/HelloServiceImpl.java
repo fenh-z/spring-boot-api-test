@@ -5,6 +5,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
 /**
  * @Author zhangdx
  * @CreateDate 2023/8/1 09:30
@@ -30,6 +34,8 @@ public class HelloServiceImpl implements HelloService {
         HelloService proxy = (HelloService) ProxyBean.getProxyBean(helloService, new MyInterceptor());
         proxy.sayHello("YY");
 
+        List<Map<String, Object>> a = new ArrayList<>();
+        a.isEmpty();
 
     }
 }
